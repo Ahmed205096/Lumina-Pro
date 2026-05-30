@@ -4,6 +4,8 @@ Lumina Tasker is a modern team workspace built for people who want task manageme
 
 This is not a toy todo list. It is a full-stack task platform with a glassmorphic interface, workspace-level permissions, database-backed state, and team workflows that feel ready for real usage.
 
+Live Demo :[https://lumina.ahmed-khattab.online/]
+
 ## What Makes It Great
 
 - **Beautiful first impression**: a cinematic landing page with animated backgrounds, pricing, about pages, and a demo modal.
