@@ -56,8 +56,8 @@ Create a `.env` file in the project root and add the required variables:
 MONGO_URI=
 
 NEXTAUTH_SECRET=
-NEXTAUTH_URL=http://localhost:3000
-NEXT_PUBLIC_URL=http://localhost:3000
+NEXTAUTH_URL=http://lumina.ahmed-khattab.online
+NEXT_PUBLIC_URL=http://lumina.ahmed-khattab.online
 
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
@@ -67,6 +67,7 @@ FACEBOOK_CLIENT_ID=
 FACEBOOK_CLIENT_SECRET=
 
 NEXT_RESEND_SECRET=
+NEXT_RESEND_FROM_EMAIL="Lumina Pro <noreply@lumina.ahmed-khattab.online>"
 
 NEXT_PUBLIC_GET_USER_INFO=/api/user
 NEXT_PUBLIC_MANAGE_WORKS=/api/workspace/manage-workspace
@@ -84,7 +85,7 @@ Run the development server:
 npm run dev
 ```
 
-Open:
+For local development, open:
 
 ```text
 http://localhost:3000
@@ -125,4 +126,3 @@ The core models are intentionally simple and practical:
 Lumina Tasker has the kind of architecture that can grow. The UI is already split into public and authenticated surfaces, server routes enforce workspace boundaries, state is centralized where it matters, and the product has enough workflow depth to feel like a serious collaboration tool.
 
 It looks premium, but more importantly, it behaves like a real app.
-

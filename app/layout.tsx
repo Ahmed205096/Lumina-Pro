@@ -13,7 +13,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = (process.env.NEXT_PUBLIC_URL as string).replace(/\/+$/, "");
+const siteUrl = (
+  process.env.NEXT_PUBLIC_URL ||
+  process.env.NEXTAUTH_URL ||
+  "http://lumina.ahmed-khattab.online"
+).replace(/\/+$/, "");
 
 const siteDescription =
   "Lumina is a modern team workspace for managing tasks, workspaces, Kanban boards, invitations, notifications, and role-aware collaboration in one beautiful place.";

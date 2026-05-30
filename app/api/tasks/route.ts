@@ -9,6 +9,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.NEXT_RESEND_SECRET);
+const resendFromEmail =
+  process.env.NEXT_RESEND_FROM_EMAIL ||
+  "Lumina Pro <noreply@lumina.ahmed-khattab.online>";
 
 function extractTitle(content: string): string {
   return (
@@ -273,7 +276,7 @@ export const POST = async (req: NextRequest) => {
       const baseUrl = (
         process.env.NEXT_PUBLIC_URL ||
         process.env.NEXTAUTH_URL ||
-        "http://localhost:3000"
+        "http://lumina.ahmed-khattab.online"
       ).replace(/\/+$/, "");
 
       const assigneeUsers = await User.find({
@@ -320,7 +323,7 @@ export const POST = async (req: NextRequest) => {
 
           await resend.emails.send({
             to: String(user.email),
-            from: "Lumina Pro <onboarding@resend.dev>",
+            from: resendFromEmail,
             subject: emailSubject,
             html,
           });

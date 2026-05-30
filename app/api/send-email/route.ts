@@ -9,6 +9,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.NEXT_RESEND_SECRET);
+const resendFromEmail =
+  "Lumina Pro <noreply@lumina.ahmed-khattab.online>";
 
 type NotificationType =
   | "WORKSPACE_INVITATION"
@@ -56,7 +58,7 @@ export const POST = async (request: NextRequest) => {
 
     const baseUrl =
       (process.env.NEXT_PUBLIC_URL || process.env.NEXTAUTH_URL || "").trim() ||
-      "http://localhost:3000";
+      "http://lumina.ahmed-khattab.online";
 
     const inviterName =
       String(session.user.name || "").trim() ||
@@ -121,7 +123,7 @@ export const POST = async (request: NextRequest) => {
 
     const email_content = {
       to: body.to,
-      from: "Lumina Pro <onboarding@resend.dev>",
+      from: resendFromEmail,
       subject,
       html,
     };
