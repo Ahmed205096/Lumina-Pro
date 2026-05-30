@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import { FcCollaboration } from "react-icons/fc";
 import NavLinks from "./NavLinks";
 import { useState } from "react";
 import Link from "next/link";
@@ -50,12 +50,9 @@ export default function Navbar() {
     <>
       <div className="z-30 flex w-full fixed  justify-between items-center py-[15px] px-[30px] backdrop-blur-xl bg-white/3 border-b  border-white/8 md:px-[75px]">
         <div className="flex justify-center items-center gap-1">
-          <Image
-            src="/planning.png"
-            alt="Lumina logo"
-            width={30}
-            height={30}
-            className="rounded-full cursor-pointer shadow-[0px_0_16px_rgba(255,255,255,0.27)]"
+          <FcCollaboration
+            size={30}
+            className="bg-white/10 rounded-full cursor-pointer shadow-[0px_0_16px_rgba(255,255,255,0.27)]"
           />
           <h2 className="text-[25px] font-bold cursor-pointer">Lumina</h2>
         </div>
